@@ -1,0 +1,80 @@
+{
+    "name": "labo0708-vm",
+    "id": "/subscriptions/3dc80046-8d5f-4f1e-ab48-8967dd206965/resourceGroups/Laboratoire0708/providers/Microsoft.Compute/virtualMachines/labo0708-vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "westeurope",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "a84cad8a-be08-46b1-ac08-63f86db96372",
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "0001-com-ubuntu-server-jammy",
+                "sku": "22_04-lts-gen2",
+                "version": "latest",
+                "exactVersion": "22.04.202310210"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "labo0708-vm_OsDisk_1_59af07447b8a43099d78902d3e0e877d",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/3dc80046-8d5f-4f1e-ab48-8967dd206965/resourceGroups/Laboratoire0708/providers/Microsoft.Compute/disks/labo0708-vm_OsDisk_1_59af07447b8a43099d78902d3e0e877d"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "labo0708-vm",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/azureuser/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdUmS9aZrdTMHL2HRp2+mEp9Z9X4oO6lIvlPB0RB8SrL+KPcdJiqE1TUuOZi8k1/ELyDEEDUpqRX9deDjovgtA8fCm//v5UXsluyvxA3zS6YBBLE7FpJ2nyvyBfwR+ePDgJAoDl637KB2o99R1HBzum+W8EM36vJqyDgnzpuJqmxizSk23GWSvnfBoNcZpYeWeapDAymRf7HpHzhfOoFgSkuVt4y1wd7qyjNm96jvjJ4N6nWpjOTns9tnd142g7HPY0tXApzA0YiaHj5aJAlig0NGt8AZbA9tGAbcNySI+/4L2iXP9MKKpcrNdKn82IqCY+FUQy6Rpx11/VEgMehm5V574adbwiY925ml6rD+XdbXfWaemRwgTAUZf/TyewF11tuwpmqOk9PxF7mgabm/kcWVs5U+nrOjIR0hdKy7v2xvhiZ6NApPqWTucQD4oGIqhlPQiipnI6ShGro4KB5l2wLFowc+u11Q505xv1Tk91zBpLwZuMwWvjigP5EJWqx0= generated-by-azure"
+                        }
+                    ]
+                },
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/3dc80046-8d5f-4f1e-ab48-8967dd206965/resourceGroups/Laboratoire0708/providers/Microsoft.Network/networkInterfaces/labo0708-vm558",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    }
+}
